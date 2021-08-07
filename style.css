@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('back.jpg');
+}
+
+/* Style the header */
+header {
+  background-image: url('dd.jpg');
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: unset;
+  padding: 0.3px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(53, 53, 52, 0.979);
+  opacity: 0.9;
+}
+
+article {
+  float: left;
+  padding: 15px;
+  width: 73%;
+  word-wrap:break-word;
+  background-color: #f1f1f1;
+}
+aside {
+  max-height:100%;
+  width: 26%;
+  padding-left: 5px;
+  margin-left: 5px;
+  float: left;
+  background-color: lightgray;
+}
+aside center{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+
+}
+@keyframes example {
+  0%   { left:0px; top:0px;}
+  25%  { left:10px; top:0px;}
+  50%  { left:10px; top:11px;}
+  75%  { left:0px; top:11px;}
+  100% { left:0px; top:0px;}
+}
+img {
+   border-radius: 8px;
+
+}
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #ffffff00;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  opacity: 0.6;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+footer{
+    background-color: gainsboro;
+    opacity: 0.8;
+}
+input:required:invalid {
+  border-color: #c00000;
+}
+#torra {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#torra td, #torra th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#torra tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#torra th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: brown;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  max-width: 900px;
+  margin: auto;
+}
+
+.container aside {
+  flex: 0 100%;
+  height: 100px;
+}
+
+@media (min-width: 600px) {
+  .container aside {
+    flex: 0 0 200px;
+  }
+}
